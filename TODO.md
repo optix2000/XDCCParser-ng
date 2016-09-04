@@ -6,6 +6,7 @@
     - [ ] Multi-bot w/ config
   - [ ] Search support
     - [ ] Live search support
+  - [ ] Remember theme in cookie
 - [ ] Rewrite old JS files
   - [ ] HTML 5
   - [ ] Better table generation
