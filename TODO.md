@@ -1,0 +1,9 @@
+- [ ] Feature parity with XDCCParser-Global
+  - [ ] Multi-bot support
+   - [ ] Multi-bot w/ config
+  - [ ] Search support
+    - [ ] Live search support
+- [ ] Rewrite old JS files
+  - [ ] HTML 5
+  - [ ] Better table generation
+  - [ ] Better sorting
