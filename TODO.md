@@ -1,6 +1,6 @@
 - [ ] Feature parity with XDCCParser-Global
   - [ ] Multi-bot support
-   - [ ] Multi-bot w/ config
+    - [ ] Multi-bot w/ config
   - [ ] Search support
     - [ ] Live search support
 - [ ] Rewrite old JS files
