@@ -16,7 +16,7 @@
 
 function p() {
 	this.setSkin=function(id) {
-		document.getElementById("skin").href = "style"+id+".css";
+		document.getElementById("skin").href = "css/style"+id+".css";
 		var exdate=new Date();
 		exdate.setDate(exdate.getDate()+7);
 		document.cookie="skin"+"="+escape(id)+";expires="+exdate.toGMTString();
