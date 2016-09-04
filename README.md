@@ -12,3 +12,6 @@ It also provides advantages over [uguu/xdccparser](https://github.com/uguu/xdccp
 
 ## INSTALL
 TODO
+
+## Pull Requests
+Yes.
