@@ -40,7 +40,8 @@ To obtain a copy of the GNU General Public License, visit
 
 ==========================================================================
 
-ObjTree.js license:
+ObjTree.js is licensed under the following license:
+
 Copyright (c) 2005-2006 Yusuke Kawasaki. All rights reserved. 
 
 This program is free software; you can redistribute it and/or modify it
