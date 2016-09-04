@@ -1,4 +1,7 @@
 - [ ] Feature parity with XDCCParser-Global
+  - [ ] Fix sorting
+  - [ ] Config support
+  - [ ] IRC Server/Channel parsing
   - [ ] Multi-bot support
     - [ ] Multi-bot w/ config
   - [ ] Search support
