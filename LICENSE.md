@@ -26,8 +26,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE. 
 
 ==========================================================================
-index.html, style[1-6].css, style-ie.css have been adapted either in part
-or in whole under the following license:
+index.html, packlist.js, style[1-6].css, style-ie.css have been adapted
+either in part or in whole under the following license:
 
 Copyright 2008-2009 Alex Yu and DrX
 
