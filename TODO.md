@@ -1,8 +1,10 @@
 - [ ] Feature parity with XDCCParser-Global
-  - [ ] Fix sorting
-  - [ ] XDCC Send copy pasta
+  - [X] Fix sorting
+  - [X] XDCC Send copy pasta
   - [ ] Config support
-  - [ ] Search support
+    - [ ] Bot name
+    - [ ] XML fetch location
+  - [X] Search support
     - [ ] Live search support
   - [ ] Remember theme in cookie
   - [ ] IRC Server/Channel parsing
