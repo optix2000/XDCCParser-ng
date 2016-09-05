@@ -31,7 +31,7 @@
 	<div class="content">
 		<div class="contentPad">
 			<div id="searchdiv">
-				<form action="#" onsubmit="p.search();return false;">Search:&nbsp;&nbsp;<input type="text" name="search" id="search" class="search" style="width:220px;" {if $search}value="{$search|escape:'html'}" {/if}/>&nbsp;&nbsp;<input type="submit" class="search" value="search" style="width:40px;" />&nbsp;&nbsp;<span class="default">(<a href="#" onclick="p.getLastURI();">permalink</a>)</span></form>
+				<form id="searchbox" onsubmit="dosearch();return false;">Search:&nbsp;&nbsp;<input type="text" name="search" id="search" class="search" style="width:220px;"/>&nbsp;&nbsp;<input type="submit" class="search" value="search" style="width:40px;" />&nbsp;&nbsp;<span class="default">(<a href="#" onclick="p.getLastURI();">permalink</a>)</span></form>
 			</div>
 		</div>
 	<h2 id="listname">&nbsp;</h2>

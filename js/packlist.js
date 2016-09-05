@@ -21,6 +21,8 @@ function p() {
 	this.url = "";
 	this.init=function() {
 		this.table=document.getElementById('listtable');
+		this.status=document.getElementById('status');
+		this.searchdiv=document.getElementById('searchdiv');
 		this.listname=document.getElementById('listname');
 		this.tablehead="<table cellspacing='0' id='listtable'><tr class='animeColumn'><th class='number'>Bot <a href='javascript:p.k.sort(p.botDesc);p.flush();'>&#8593;</a>&nbsp;&nbsp;<a href='javascript:p.k.sort(p.botAsc);p.flush();'>&#8595;</a></th><th class='number'>Pack <a href='javascript:p.k.sort(p.numberDesc);p.flush();'>&#8593;</a>&nbsp;&nbsp;<a href='javascript:p.k.sort(p.numberAsc);p.flush();'>&#8595;</a></th><th class='number'>Size <a href='javascript:p.k.sort(p.sizeDesc);p.flush();'>&#8593;</a>&nbsp;&nbsp;<a href='javascript:p.k.sort(p.sizeAsc);p.flush();'>&#8595;</a></th><th class='name'>Filename <a href='javascript:p.k.sort(p.nameDesc);p.flush();'>&#8593;</a>&nbsp;&nbsp;<a href='javascript:p.k.sort(p.nameAsc);p.flush();'>&#8595;</a></th></tr>";
 		this.search();
@@ -31,21 +33,17 @@ function p() {
 			buffer += "<tr class='anime0' id='none' ><td class='none' colspan='4'>No packs found.</td></tr>";
 		} else {
 			for(i=0;i<this.k.length;i++) {
-				var size = (this.k[i]['packsize']==0) ? "<1" : this.k[i]['packsize'];
+				var size = (this.k[i]['s']==0) ? "<1" : this.k[i]['s'];
 				size += "M";
-				buffer += "<tr class='anime"+(i%2)+"' onclick=\"p.genCommand('"+"Teacup"+"',"+this.k[i]['packnr']+");\"><td class='number'>"+"Teacup"+"</td><td class='number'>"+this.k[i]['packnr']+"</td><td class='number'>"+size+"</td><td class='name'>"+this.k[i]['packname']+"</td></tr>";
+				buffer += "<tr class='anime"+(i%2)+"' onclick=\"p.genCommand('"+this.k[i]['b']+"',"+this.k[i]['n']+");\"><td class='number'>"+this.k[i]['b']+"</td><td class='number'>"+this.k[i]['n']+"</td><td class='number'>"+size+"</td><td class='name'>"+this.k[i]['f']+"</td></tr>";
 			}
 		}
 		buffer += "</table>";
-		this.listname.innerHTML = this.getLastName();
 		this.table.innerHTML = buffer;
 		this.status.style.display = 'none';
 	};
-	this.getLastName=function() {
-		var name = (this.lastType==1) ? "Search: " : "Bot: ";
-		name += this.lastValue;
-		name += (this.lastType!=1) ? ' [<a href="rss.php?nick='+this.lastValue+'">rss</a>]' : "";
-		return name;
+	this.genCommand=function(nick,pack) {
+		prompt('Paste this in your irc client:','/msg '+nick+' xdcc send #'+pack);
 	};
 	this.search=function() {
 			this.table.innerHTML = this.tablehead + "<tr class='anime0' id='start'><td class='none' colspan='4'>Please select a bot or enter search terms to start.</td></tr></table>";
