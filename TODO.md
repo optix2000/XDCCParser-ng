@@ -9,6 +9,7 @@
 
   - [x] Multi-bot support
     - [x] Multi-bot w/ config
+  - [ ] Fix permalinking
 
 - [ ] Rewrite old JS files
   - [x] HTML 5
@@ -18,8 +19,8 @@
 # New features
 - [ ] Live search support
 - [ ] ~~Remember theme in cookie~~ (Likely to drop theme support, as it's pretty useless)
-- [ ] IRC Server/Channel parsing
 - [ ] Better multi-bot features
   - [ ] Bot statistics
   - [ ] Bot filtering/selection
 - [ ] Group filtering/selection
+- [ ] IRC Server/Channel parsing
