@@ -1,0 +1,12 @@
+{
+    "bots": [
+        {
+            "name": "Bot 1",
+            "url": "examples/sample.xml"
+        },
+        {
+            "name": "Bot 2",
+            "url": "//raw.githubusercontent.com/optix2000/XDCCParser-ng/master/examples/sample.xml"
+        }
+    ]
+}
