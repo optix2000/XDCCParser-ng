@@ -67,6 +67,8 @@ var packlist = function() {
             this.fetch_bot(bots[i]['name'], bots[i]['url']);
         }
         console.log('Initialized');
-    }
+    }.bind(this)
 }
 var pl = new packlist();
+
+$(pl.init)
