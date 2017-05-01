@@ -1,10 +1,23 @@
 var packlist = function() {
+    this.config = null;
     this.converted_packlist = [];
 
+    this.fetch_config = function () {
+        var xhttp = new XMLHttpRequest();
+        var _this = this
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                _this.config = JSON.parse(xhttp.responseText);
+            }
+        }
+        xhttp.open('GET', 'config.json', false);
+        xhttp.send();
+    }
     this.fetch_bot = function(name, url) {
         var otree = new XML.ObjTree();
         var xhttp = new XMLHttpRequest();
         var botdata;
+        var _this = this
         xhttp.onreadystatechange = function() {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 botdata = otree.parseXML(xhttp.responseText);
@@ -16,9 +29,9 @@ var packlist = function() {
                     tmp['b'] = name;
                     tmp['n'] = parseInt(pack['packnr']);
                     tmp['f'] = pack['packname'];
-                    this.converted_packlist.push(tmp);
+                    _this.converted_packlist.push(tmp);
                 };
-                p.k = this.converted_packlist;
+                p.k = _this.converted_packlist;
                 p.flush();
             }
         }
@@ -27,11 +40,10 @@ var packlist = function() {
     }
     this.dosearch = function() {
         var search = document.getElementById('search').value.toLowerCase();
-        console.log(search);
         var search_list = [];
         if (search != '') {
-            for (i=0; i<converted_packlist.length; i++) {
-                pack = converted_packlist[i];
+            for (i=0; i<this.converted_packlist.length; i++) {
+                pack = this.converted_packlist[i];
                 if (pack['f'].toLowerCase().includes(search)) {
                     search_list.push(pack);
                     console.log(pack);
@@ -39,17 +51,22 @@ var packlist = function() {
             };
             p.k = search_list;
         } else {
-            p.k = converted_packlist;
-            console.log('nope');
+            p.k = this.converted_packlist;
         };
         p.flush();
     }
 
 
     this.init = function() {
-        console.log('init');
+        console.log('Initializing')
         p.init();
-        this.fetch_bot();
+        this.fetch_config();
+        var bots = this.config.bots
+        for (var i = 0; i<bots.length; i++) {
+            console.log('Loading '+ bots[i]['name'])
+            this.fetch_bot(bots[i]['name'], bots[i]['url']);
+        }
+        console.log('Initialized');
     }
 }
 var pl = new packlist();
