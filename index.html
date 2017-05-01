@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js/ObjTree.js"></script>
 	<script type="text/javascript" src="js/packlist-ng.js"></script>
 </head>
-<body onload="init()">
+<body onload="pl.init()">
 <div class="botlist">
 <div id="botlist" style="padding:10px;">
 <h3>Skins</h3>
@@ -28,7 +28,7 @@
 	<div class="content">
 		<div class="contentPad">
 			<div id="searchdiv">
-				<form id="searchbox" onsubmit="dosearch();return false;">Search:&nbsp;&nbsp;<input type="text" name="search" id="search" class="search" style="width:220px;"/>&nbsp;&nbsp;<input type="submit" class="search" value="search" style="width:40px;" />&nbsp;&nbsp;<span class="default">(<a href="#" onclick="p.getLastURI();">permalink</a>)</span></form>
+				<form id="searchbox" onsubmit="pl.dosearch();return false;">Search:&nbsp;&nbsp;<input type="text" name="search" id="search" class="search" style="width:220px;"/>&nbsp;&nbsp;<input type="submit" class="search" value="search" style="width:40px;" />&nbsp;&nbsp;<span class="default">(<a href="#" onclick="p.getLastURI();">permalink</a>)</span></form>
 			</div>
 		</div>
 	<h2 id="listname">&nbsp;</h2>
