@@ -1,19 +1,25 @@
-- [ ] Feature parity with XDCCParser-Global
-  - [X] Fix sorting
-  - [X] XDCC Send copy pasta
-  - [ ] Config support
-    - [ ] Bot name
-    - [ ] XML fetch location
-  - [X] Search support
-    - [ ] Live search support
-  - [ ] Remember theme in cookie
-  - [ ] IRC Server/Channel parsing
-  - [ ] Multi-bot support
-    - [ ] Multi-bot w/ config
+# v1.0
+- [x] Feature parity with XDCCParser-Global
+  - [x] Fix sorting
+  - [x] XDCC Send copy pasta
+  - [x] Config support
+    - [x] Bot name
+    - [x] XML fetch location
+  - [x] Search support
+
+  - [x] Multi-bot support
+    - [x] Multi-bot w/ config
 
 - [ ] Rewrite old JS files
-  - [ ] HTML 5
+  - [x] HTML 5
   - [ ] Better table generation
   - [ ] Better sorting
 
 # New features
+- [ ] Live search support
+- [ ] ~~Remember theme in cookie~~ (Likely to drop theme support, as it's pretty useless)
+- [ ] IRC Server/Channel parsing
+- [ ] Better multi-bot features
+  - [ ] Bot statistics
+  - [ ] Bot filtering/selection
+- [ ] Group filtering/selection
