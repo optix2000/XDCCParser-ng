@@ -1,6 +1,8 @@
 # XDCCParser-ng
 Next Generation XDCC Parser for iroffer-dinoex
 
+Note: This probably still works, but is otherwise not supported.
+
 ## About XDCCParser-ng
 
 XDCCParser-ng is a pure Javascript packlist indexer for iroffer-dinoex. This is a rewrite/fork of the original XDCC Parser-Global into a more modern, pure HTML+Javascript page.
